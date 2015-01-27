@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Mastering xPaaS - get down and dirty in the OpenShift Cloud</title>
+
+		<meta name="description" content="Devoxx BE 2014 University Session">
+		<meta name="author" content="Eric D. Schabell">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+                    <div style="width: 1056px; height: 300px;">
+                        <h2><b>Mastering xPaaS</b></h2>
+                        <h3>Get down and dirty in the OpenShift Cloud</h3>
+                    </div>
+                    <div style="width: 1056px; height: 200px; color: white;">
+                        <h5>Devoxx BE 2014</h5>
+                        <h5><a href="http://cfp.devoxx.be/2014/talk/QKM-0129/Mastering%20xPaaS%20-%20get%20down%20and%20dirty%20in%20the%20OpenShift%20Cloud" target="_blank" style="color: red">University Session</a></h5>
+                        <h5>Room 4: 13:30 - 16:30</h5>
+                    </div>
+                    <div style="width: 600px; height: 300px; text-align: left;">
+                        Eric D. Schabell<br/>
+                        JBoss Technology Evangelist<br/>
+                        Twitter: @ericschabell<br/>
+                        Blog: <a href="http://schabell.org" style="color: red">http://schabell.org</a>
+                    </div>
+				</section>
+
+                <section>
+                    <div style="width: 1056px; height: 150px;">
+                        <h2>Following along...</h2>
+                    </div>
+                    <div style="width: 1056px; height: 150px; color: white;">
+                        <h3><code>masteringxpaas-onthe.rhcloud.com</code></h3>
+                    </div>
+                    <div style="width: 600px; height: 200px; text-align: left;">
+                        Need to register? Do it now... <a href="https://www.openshift.com/app/account/new" target="_blank" style="color: red">https://www.openshift.com</a><br>
+                        <a href="https://www.openshift.com/app/account/new" target="_blank"><img src="images/signup.png"></a>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>University timeline</h3>
+                    <ul>
+                        <li><a href="index.html#/2" style="color: red"><b>Part I (13:30 - 14:45)</b></a></li>
+                        <ul>
+                            <li>Taking the xPaaS tour</li>
+                            <li>Tooling</li>
+                            <li>Into the Cloud</li>
+                        </ul>
+                        <li>30 minute break (14:45 - 15:15)</li>
+                        <li><a href="partII.html" target="_blank" style="color: red">Part II (15:15 - 16:30)</a></li>
+                        <ul>
+                            <li>Learning PaaS</li>
+                            <li>Mastering xPaaS</li>
+                        </ul>
+                    </ul>
+                </section>
+
+
+<!-- Start Part I -->
+
+                <section>
+                    <h2>Taking the xPaaS tour</h2>
+                </section>
+
+                <section>
+                    <div align="center">
+                       <img src="images/layers.png" />
+                    </div>
+                </section>
+
+                <section>
+                    <h2>So what's</h2>
+                    <h1>IaaS</h1>
+                </section>
+
+                <section>
+                    <h3>Repeat after me...</h3>
+                    <h1>I</h1>
+                    <h1>don't</h1>
+                    <h1>care</h1>
+                </section>
+
+                <section>
+                    <h3>So what's the PaaS layer to me?</h3>
+                </section>
+
+                <section data-background="images/hammers.png">
+                </section>
+
+                <section data-background="images/never-look.png">
+                    <h2><strong>Never look back...</strong></h2>
+                </section>
+
+                <section data-background="images/dev-heaven.png">
+                </section>
+
+                <section data-background="images/dorking.png">
+                </section>
+
+                <section>
+                    <h2>A Little History</h2>
+                    <ul>
+                        <li>Nov 2010: Makara acquired</li>
+                        <li>In 2011: merged into OpenShift project</li>
+                        <li>May 2012: Open Sourced</li>
+                        <li>Dec 2012: OpenShift Primer (e-book)</li>
+                        <li>2013: Online Public PaaS / Enterprise Private PaaS / xPaaS Services</li>
+                        <li>Apr 2014: OpenShift Primer revision 2 (e-book)</li>
+                        <li>June 2014: OpenShift Online Market Place, extend reach to LTAM / APAC</li>
+                        <li>Sep 2014: European hosting</li>
+                        <li>Coming soon: v3 with Docker, Kubernetes, etc...</li>
+                    </ul>
+                    <p>
+                        <i>Events - JUG's, GOTO Aarhus, JAX London, JUDCon, Devoxx (2x), APAC Tech Exchange</i>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>OpenShift Primer</h2>
+                    <h3>Devoxx 2013</h3>
+                    <h3><a href="https://www.parleys.com/play/52aedc3fe4b0cc758a75808d/chapter0/about" target="_blank" style="color: red">Watch on Parleys.com</a></h3>
+                    <div align="right">
+                        <a href="https://www.parleys.com/play/52aedc3fe4b0cc758a75808d/chapter0/about" target="_blank"><img src="images/primer.png"></a>
+                        <a href="http://developerpress.com/OpenShiftPrimerRevision2-175421" target="_blank"><img src="images/openshift_primer2.jpg" height="220px" width="160px"></a>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Now you can talk about</h3>
+                    <h3>IaaS & PaaS</h3>
+                    <h3>but what about</h3>
+                    <h1>xPaaS</h1>
+                </section>
+
+                <section>
+                    <h3>Enterprise apps are complex</h3>
+                    <div align="center">
+                        <img src="images/complex-arch.png" />
+                    </div>
+                </section>
+
+                <section>
+                    <h3>PaaS reduces work & risk</h3>
+                    <div align="center">
+                        <img src="images/risk-arch.png" />
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Reduce more work with higher-level services</h3>
+                    <div align="center">
+                        <img src="images/higher-serivces.png" />
+                    </div>
+                </section>
+
+                <section>
+                    <h3>JBoss xPaaS services for OpenShift</h3>
+                    <div align="center">
+                        <img src="images/jboss-arch.png" />
+                    </div>
+                </section>
+
+
+                <section>
+                    <h3>Services for OpenShift</h3>
+                    <div align="center">
+                        <img src="images/xpaasstack.png" />
+                    </div>
+                </section>
+
+                <section>
+                    <h3>JBoss xPaaS Services</h3>
+                    <div align="center">
+                        <img src="images/xpaasjboss.png" />
+                    </div>
+                </section>
+
+                <section>
+                    <div style="width: 1056px; height: 200px;">
+                        <h2><b>This is important</b></h2>
+                        <h3>Follow along from here on out...</h3>
+                    </div>
+                    <div style="width: 800px; height: 200px; text-align: left;">
+                        Need to register? Should have done it already...
+                        <a href="https://www.openshift.com/app/account/new" target="_blank"><img src="images/signup.png"></a>
+                    </div>
+                </section>
+
+<!-- The Tools -->
+
+                <section>
+                    <h2>The tools</h2>
+                </section>
+
+                <section>
+                    <h2>Intermezzo</h2>
+                    <ol>
+                        <li><a href="https://www.openshift.com/products/origin" target="_blank" style="color: red">OpenShift Origin</a> - upstream community.</li>
+                        <li><b><a href="https://www.openshift.com/products/online" target="_blank" style="color: red">OpenShift Online</a> - public cloud.</b></li>
+                        <li><a href="https://www.openshift.com/products/enterprise" target="_blank" style="color: red">OpenShift Enterprise (OSE)</a> - on-premise.</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2>Quickstart</h2>
+                    <ol>
+                        <li>Sign up</li>
+                        <li>Install client tools</li>
+                        <li>Create domain</li>
+                        <li>Create application</li>
+                        <li>Deploy application (GIT)</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2>Sign up, it's free!</h2>
+                    <ul>
+                        <li><a href="https://www.openshift.com/app/account/new" target="_blank" style="color: red">OpenShift website</a></li>
+                        <li>Example projects you can deploy now</li>
+                        <ul>
+                            <li><a href="http://github.com/openshift" target="_blank" style="color: red">OpenShift GitHub</a></li>
+                        </ul>
+                        <div style="width: 800px; height: 200px; text-align: left;">
+                            <li>Help</li>
+                            <ul>
+                                <li>IRC freenode #openshift</li>
+                                <li>forums</li>
+                                <li>email: openshift@redhat.com</li>
+                            </ul>
+                            <a href="https://www.openshift.com/app/account/new" target="_blank"><img src="images/signup.png"></a>
+                        </div>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Install Client Tools</h2>
+                    <ul>
+                        <li>Fedora / RHEL</li>
+                        <ul>
+                            <li>openshift repo</li>
+                            <li>/etc/yum.repos.d</li>
+                            <li>sudo yum install rubygem-rhc</li>
+                        </ul>
+                        <li>OSX / Unix</li>
+                        <ul>
+                            <li>gem install rhc</li>
+                            <li>see forum or blogs</li>
+                        </ul>
+                    </ul>
+                    <div align="right">
+                        <img src="images/rhc.png">
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Install for Windows</h2>
+                    <ul>
+                        <li><a href="https://blog.openshift.com/how-to-install-the-openshift-rhc-client-tools-on-windows/" target="_blank" style="color: red">Windows article</a> details following:</li>
+                        <ul>
+                            <li>install Ruby for Windows</li>
+                            <li>install GIT on Windows</li>
+                            <li>install rhc tooling:</li>
+                            <ul>
+                                <li>gem install rhc</li>
+                            </ul>
+                        </ul>
+                    </ul>
+                    <div align="center">
+                        <img src="images/rubywindows.png" height="50%" width="50%"><img src="images/gitwindows.png" height="50%" width="50%">
+                    </div>
+                </section>
+
+                <section>
+                    <h2>RHC for Windows</h2>
+                    <ul>
+                        <li>Lastly we install rhc tooling:</li>
+                        <ul>
+                            <li>gem install rhc</li>
+                        </ul>
+                    </ul>
+                    <div align="right">
+                        <img src="images/rhcwindows.png">
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Create Domains</h2>
+                    <ul>
+                        <li>Use rhc command</li>
+                        <ul>
+                            <li><code>$ rhc domain create {mydomain}</code></li>
+                        </ul>
+                        <li>Use web admin console</li>
+                    </ul>
+                    <div align="center">
+                        <img src="images/domains.png">
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Web Admin Console</h3>
+                    <div align="center">
+                        <img src="images/webadmin.png">
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Your account</h3>
+                    <div align="center">
+                        <img src="images/settings.png">
+                    </div>
+                </section>
+
+                <section data-background-color="white">
+                    <h1>OpenShift</h1>
+                    <img src="images/gears.png">
+                </section>
+
+                <section>
+                    <h2>Bronze upgrade</h2>
+                    <h3>Some xPaaS need...</h3>
+                    <div align="center">
+                        <img src="images/openshiftplans.png">
+                    </div>
+                </section>
+
+<!-- Into the Cloud -->
+
+                <section>
+                    <h2>Into the Cloud</h2>
+                </section>
+
+                <section data-background="images/instantapps.png" data-background-size="99%">
+                </section>
+
+                <section data-background="images/featuredapp.png" data-background-size="99%">
+                </section>
+
+               <section data-background="images/createapps.png" data-background-size="99%">
+                </section>
+
+                <section data-background="images/readytocode.png" data-background-size="99%">
+                </section>
+
+                <section>
+                    <h2>Open issues?</h2>
+                    <img src="images/status.png">
+                </section>
+
+                <section>
+                    <h2>Application Details</h2>
+                    <img src="images/appdetails.png">
+                </section>
+
+                <section>
+                    <h2>Cartridge Additions</h2>
+                    <img src="images/cartridges.png">
+                </section>
+
+                <section>
+                    <h2>Other Options</h2>
+                    <ul>
+                        <li>name app and define type</li>
+                        <ul>
+                            <li><code>$ rhc app create -t {apptype} {appname}</code></li>
+                            <li>Node.js, DIY, Jenkins, PHP, Ruby, Python, Perl and most important Java!</li>
+                        </ul>
+                        <li>add application to local repo</li>
+                        <ul>
+                            <li><code>$ git add .</code></li>
+                        </ul>
+                        <li>commit changes</li>
+                        <ul>
+                            <li><code>$ git commit -m "Initial app import."</code></li>
+                        </ul>
+                    </ul>
+                    <div align="right">
+                        <img src="https://raw.githubusercontent.com/eschabell/erics-images/master/jbdsopenshift.png">
+                    </div>
+                </section>
+
+                <section>
+                    <h2>JBoss Developer Studio</h2>
+                    <div align="center">
+                        <img src="images/jbdsdetails.png">
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Deploy to Cloud</h2>
+                    <ul>
+                        <li>Push the code</li>
+                        <ul>
+                            <li><code>$ git push</code></li>
+                        </ul>
+                        <li>Congratulations, your app is in the Cloud!</li>
+                    </ul>
+                    <div align="right">
+                        <img src="images/pushedapp.png"><img src="images/eap.png" height="450px">
+                    </div>
+                </section>
+
+                <section data-background-color="lightgrey">
+                    <h2>mPaaS: Java Mobile</h2>
+                    <h3><a href="https://github.com/eschabell/openshift-devoxx" target="_blank" style="color: red">Devoxx Mobile Registration</a></h3>
+                    <ul>
+                        <li><code>$ rhc app create -t jbosseap-6 devoxx</code></li>
+                        <li><code>$ cd devoxx</code></li>
+                        <li><code>$ git remote add upstream -m master git://github.com/eschabell/openshift-devoxx.git</code></li>
+                        <li><code>$ git pull -s recursive -X theirs upstream master</code></li>
+                        <li><code>$ git push</code></li>
+                        <li><code>http://devoxx-$your_domain.rhcloud.com</code></li>
+                    </ul>
+                    <div align="right">
+                        <img src="images/aerogear.png">
+                    </div>
+                </section>
+
+                <section data-background-color="lightgrey">
+                    <h2>Devoxx mobile</h2>
+                    <div align="center">
+                        <img src="images/mobileapp.png">
+                    </div>
+                </section>
+
+                <section data-background-color="black">
+                    <div align="center">
+                        <img src="images/devoxx1.png">
+                    </div>
+                </section>
+
+                <section data-background-color="black">
+                    <div align="center">
+                        <img src="images/devoxx2.png">
+                    </div>
+                </section>
+
+                <section data-background-color="black">
+                    <div align="center">
+                        <img src="images/devoxx3.png">
+                    </div>
+                </section>
+
+                <section data-background="images/easypeasy.png">
+                </section>
+
+<!-- End Part I -->
+
+                <section  data-background-color="white">
+                    <h1>Take a break</h1>
+                    <h5><a href="partII.html" target="_blank" style="color: red">back in a bit...</a></h5>
+                    <div align="right">
+                        <img src="images/coffeebreak.png" width="50%" height="50%">
+                    </div>
+                </section>
+
+                <section>
+                    <h3>University timeline</h3>
+                    <ul>
+                        <li><a href="partII.html" target="_blank" style="color: red">Part II (15:15 - 16:30)</a></li>
+                        <ul>
+                            <li>Learning PaaS</li>
+                            <li>Mastering xPaaS</li>
+                        </ul>
+                    </ul>
+                </section>
+
+            </div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
