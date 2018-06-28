@@ -1,4 +1,4 @@
-Update: June 2018 moved to [Github](https://gitlab.com/eschabell/openshift-presos-2015)
+Update: June 2018 moved to [Gitlab](https://gitlab.com/eschabell/openshift-presos-2015)
 
 
 Online Presentations 2015 
