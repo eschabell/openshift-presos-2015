@@ -1,3 +1,6 @@
+Update: June 2018 moved to [Github](https://gitlab.com/eschabell/openshift-presos-2015)
+
+
 Online Presentations 2015 
 -------------------------
 A set of presnetation from 2015 you can host online.
